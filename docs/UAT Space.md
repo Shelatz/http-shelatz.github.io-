@@ -8,7 +8,7 @@
    <h1>UAT Shuttle Launch!</h1>
 <body>
   <img src= "https://i.ibb.co/smwX0xy/UATspace-Logo.jpg" alt= "UATspace-Logo" border= "0">
-<script>
+<script type = "text/javascript">
 //popup enter user names
 let user = prompt ("Please Enter User ID");
 var userResponse;
