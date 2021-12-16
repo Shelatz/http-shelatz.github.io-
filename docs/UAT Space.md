@@ -4,20 +4,7 @@
         <!--Richard J Shelatz-->
    <head>
        <!--STYLE FOR FONT, SIZE, COLOR, CASE AND BACKGROUND(edited backgroud width to fit)-->
-       <style>
-       h1{ color: red;
-       font-size: xx-large;
-       font-variant-caps: petite-caps;
-       background-color: black;
-       background-size: contain;
-       width: 320px;}
-      </style>
-      <style>
-       p2{ color: red;
-       font-size: xx-large;
-       font-weight: bolder;}
-       </style>
-   </head>
+     </head>
    <h1>UAT Shuttle Launch!</h1>
 <body>
   <img src= "https://i.ibb.co/smwX0xy/UATspace-Logo.jpg" alt= "UATspace-Logo" border= "0">
