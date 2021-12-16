@@ -16,7 +16,4 @@
 
 </script>
 </body>
-<!--button and display paragraph-->
-<button type="button" onclick="StartTheCountdown()">Start Launch</button>
-<p id="CountdownDisplay">10</p>
 </html>
