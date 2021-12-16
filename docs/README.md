@@ -11,9 +11,5 @@
       b. Board Objectives<br><br>
     2. Projects
       a. Highbanker<br>    
-<script>
- 
-
-</script>
 </body>
 </html>
