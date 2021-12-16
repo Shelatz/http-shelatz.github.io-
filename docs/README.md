@@ -6,10 +6,10 @@
 <body>
     <h2>Landing page<h2>
     <br>
-   <a href="UAT Space.md"> 1. UAT Space</a><br>
-         a. CSC102<br>
+   <a href="UAT Space.md">UAT Space</a><br>
+<a href="BoardOjectives.md">CSC102</a><br>
       b. Board Objectives<br><br>
-    2. Projects
+   Projects
       a. Highbanker<br>    
 </body>
         is this the doc?
