@@ -11,7 +11,7 @@
 <h1>Welcome to Shelatz's GitHub</h1>
 <body>
     Landing page<br>
-   < href="https://github.com/Shelatz/Time-at-UAT#time-at-uat"> 1. UAT Space</a><br>
+   <a href="https://github.com/Shelatz/Time-at-UAT#time-at-uat"> 1. UAT Space</a><br>
       a. CSC102<br>
       b. Board Objectives<br>
     2. Projects<br>
