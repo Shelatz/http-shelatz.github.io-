@@ -6,11 +6,8 @@
 <body>
     <h2>Landing page<h2>
     <br>
-   <a href="UAT Space.md">UAT Space</a><br>
-<a href="BoardOjectives.md">CSC102</a><br>
-      b. Board Objectives<br><br>
-   Projects
-      a. Highbanker<br>    
-</body>
-        is this the doc?
-</html>
+        <a href="UAT Space.md">UAT Space</a><br>
+        <a href="BoardOjectives.md">Board Objectives</a><br>
+        <a href=""> Projects </a><br>  
+   
+
