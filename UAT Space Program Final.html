@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Richard J Shelatz-->
+   <head>
+  <!--Internal CSS styling--> 
+   <style>
+body {
+    /*backgroud style "I had to search how to comment in css;)"*/
+    background-image: url('https://wallpapercave.com/dwp2x/kSQdCxM.jpg');
+    color: white
+}
+    /* h1 style */
+h1{ color: red;
+    font-size: xx-large;
+    font-variant-caps: petite-caps;
+    background-color: white;
+    background-size: contain;
+    width: 320px;}
+
+table {
+    border-width: 2 px;
+    color: white;
+    width: 320px;
+  }
+ td, th {
+  border: 3px solid rgb(11, 107, 139);
+  border-radius: 15px;
+  text-align: left;
+  padding: 5px;
+  
+}
+button {
+     background-color: white;
+     width: 100px;
+     height: 30px;
+    border-color: rgb(11, 107, 139);
+}
+p2 {
+    color: white;
+    font-size: xx-large;
+    font-weight: bolder;}
+</style>
+   <h1>UAT Shuttle Launch!</h1>
+<body>
+<!--image source-->    
+<img src= "https://i.ibb.co/smwX0xy/UATspace-Logo.jpg" alt= "UATspace-Logo" border= "0"><br>
+<!--table <th> is table header <tr> is table row and <td> is table data-->
+    <br>
+<table>
+<tr>
+    <th>Data Type</th>
+    <th>Readings</th>
+</tr>
+<tr>
+    <td>Time Elapsed:</td>
+    <td>20 years</td>
+</tr>
+<tr>
+    <td>Latitude:</td>
+    <td>0</td>
+</tr>
+<tr>
+    <td>Longitude:</td>
+    <td>0</td>
+</tr>
+<tr>
+    <td>GPS Altitude:</td>
+    <td>0</td>
+</tr>
+<tr>
+    <td>BMP Sensor Alitude:</td>
+    <td>10000 miles</td>
+</tr>
+<tr>
+    <td>BMP Sensor Pressure:</td>
+    <td>125 ksi</td>
+</tr>
+<tr>
+    <td>BMP Sensor Temp:</td>
+    <td>200 k</td>
+</tr>
+<tr>
+    <td>CSS Sensor Temp:</td>
+    <td>125 k</td>
+</tr>
+<tr>
+    <td>CSS Sensor eCO2:</td>
+    <td>23</td>
+</tr>
+<tr>
+    <td>UV:</td>
+    <td>5</td>
+</tr>
+<tr>
+    <td>Accel X:</td>
+    <td>8 knots</td>
+</tr>
+<tr>
+    <td>Accel Y:</td>
+    <td>.25 knots</td>
+</tr>
+<tr>
+    <td>Accel Z:</td>
+    <td>-.75 knots</td>
+</tr>
+<tr>
+    <td>Magnetic X:</td>
+    <td>10</td>
+</tr>
+<tr>
+    <td>Magnetic Y:</td>
+    <td>0</td>
+</tr>
+<tr>
+    <td>Magnetic Z:</td>
+    <td>0</td>
+</tr>
+<tr>
+    <td>Gyro X:</td>
+    <td>0</td>
+</tr>
+<tr>
+    <td>Gyro Y:</td>
+    <td>12</td>
+</tr>
+<tr>
+    <td>Gyro Z:</td>
+    <td>2</td>
+</tr>
+</table>
+<script = JavaScript>
+//popup enter user names
+let user = prompt ("Please Enter User ID");
+var userResponse;
+//popup if length is over 20 "error re-enter user name must be less then 20 characters"
+if (user.length >= 20){
+prompt("error re-enter user name must be less then 20 characters")
+}
+//popup enter badge number
+alert (badge = prompt ("Please Enter your Badge Number"));
+var badgeResponse;
+//popup if badge number is over 3 characters "error badge number must be less then 3 characters"
+if (badge >= 999){
+prompt("error re-enter your badge number must be less then 3 characters")
+}
+var sound= document.getElementById("startButton")
+//sound function
+function sound() {
+  var audio = new Audio("https://www.dailywav.com/sites/default/files/wavs/holyshitspace.wav");
+  audio.play();
+}
+//this statment make the startButton true and the stopButton false
+function StartTheCountdown() {
+    document.getElementById("startButton").disabled = true;
+    document.getElementById("stopButton").disabled = false;
+    document.getElementById("data").rows["seconds"].innerHTML = "talking to shuttle...";
+    index = 0;
+    timer = setInterval(updateDisplay, time_interval);
+}
+//this creats a stop function, and makes the startButton false while the stopButton is true
+function stop() {
+    document.getElementById("startButton").disabled = false;
+    document.getElementById("stopButton").disabled = true;
+    document.getElementById("data").rows["seconds"].innerHTML = "";
+    clearInterval(timer);
+    
+//this aborts the script
+    document.getElementById("CountdownDisplay").innerHTML = document.write("Launch Aborted");
+}
+
+//start function
+function StartTheCountdown()
+{
+//variables   
+var countdown = 10;
+var countdownTimer = setInterval(function(){
+//if statement to display warning statment at 5 sec or less remaining
+if (countdown <= 5){
+document.getElementById("WarningStatment").innerHTML = "Warning Less Then 1/2 way to launch!"
+}    
+//if statemnet that prints blast off when clock reaches zero and just display "Blast Off!"
+if (countdown <= 0){    
+document.getElementById("CountdownDisplay").innerHTML = "Blast Off!";}
+//else statement that does the count down
+else {
+document.getElementById("CountdownDisplay").innerHTML = countdown;}    
+countdown -= 1;}, 1000);
+//needs to excute on click of the stop button
+function stop(){ 
+document.getElementById("CountdownDisplay").innerHTML = "Launch Aborted";
+//if statment to play sound when timer is ten or less
+if(countdown <=10){sound();}
+}
+}
+</script>
+<!--inserted div to see if buttons work-->
+
+<!--this button was given the id startButton and excutes the StartTheCountDown function-->
+<button type="button" id="startButton" onclick= "StartTheCountdown()">Launch</button>
+<!--this button was given the id stopButton and excutes the stop function code-->
+<button type="button" id="stopButton" onclick= "stop()">Abort!</button>
+<!--works when dound code is run on it own not sure what is going on-->
+<button type="sound"  id="space" onclick= "sound()"> Space Sound</button>
+
+<!--this is the count down display-->
+<p id="CountdownDisplay">10</p>
+<!--line break-->
+<br>
+<!--paragraph for warning statment-->
+<p2 id="WarningStatment">Launch Intilized<p2>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
